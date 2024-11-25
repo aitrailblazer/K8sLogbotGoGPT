@@ -1,0 +1,186 @@
+HIGH - Crashing pod cilium-operator-5c555fbd6f-5s9pv in namespace kube-system
+
+Source: cloud-services-capv-wc
+
+cilium-operator restart count: 13
+
+cilium-operator waiting reason: CrashLoopBackOff
+
+cilium-operator termination reason: Error
+
+close cilium-operator-5c555fbd6f-5s9pv.txt
+
+level=info msg="Skipped reading configuration file" reason="Config File "cilium-operators" Not Found in "[/]"" subsys=config
+
+level=info msg="Started gops server" address="127.0.0.1:9891" subsys=cilium-operator-generic
+
+level=info msg=" --cilium-endpoint-gc-interval='5m0s'" subsys=cilium-operator-generic
+
+level=info msg=" --cluster-id=''" subsys=cilium-operator-generic
+
+level=info msg=" --cluster-name='default'" subsys=cilium-operator-generic
+
+level=info msg=" --cluster-pool-ipv4-cidr='10.0.0.0/8'" subsys=cilium-operator-generic
+
+level=info msg=" --cluster-pool-ipv4-mask-size='24'" subsys=cilium-operator-generic
+
+level=info msg=" --cluster-pool-ipv6-cidr=''" subsys=cilium-operator-generic
+
+level=info msg=" --cluster-pool-ipv6-mask-size='112'" subsys=cilium-operator-generic
+
+level=info msg=" --cmdref=''" subsys=cilium-operator-generic
+
+level=info msg=" --cnp-node-status-gc-interval='2m0s'" subsys=cilium-operator-generic
+
+level=info msg=" --cnp-status-update-interval='1s'" subsys=cilium-operator-generic
+
+level=info msg=" --config=''" subsys=cilium-operator-generic
+
+level=info msg=" --config-dir='/tmp/cilium/config-map'" subsys=cilium-operator-generic
+
+level=info msg=" --crd-wait-timeout='5m0s'" subsys=cilium-operator-generic
+
+level=info msg=" --debug='false'" subsys=cilium-operator-generic
+
+level=info msg=" --disable-cnp-status-updates='true'" subsys=cilium-operator-generic
+
+level=info msg=" --disable-endpoint-crd='false'" subsys=cilium-operator-generic
+
+level=info msg=" --enable-ipv4='true'" subsys=cilium-operator-generic
+
+level=info msg=" --enable-ipv6='false'" subsys=cilium-operator-generic
+
+level=info msg=" --enable-k8s-api-discovery='false'" subsys=cilium-operator-generic
+
+level=info msg=" --enable-k8s-endpoint-slice='true'" subsys=cilium-operator-generic
+
+level=info msg=" --enable-k8s-event-handover='false'" subsys=cilium-operator-generic
+
+level=info msg=" --enable-metrics='false'" subsys=cilium-operator-generic
+
+level=info msg=" --gops-port='9891'" subsys=cilium-operator-generic
+
+level=info msg=" --identity-allocation-mode='crd'" subsys=cilium-operator-generic
+
+level=info msg=" --identity-gc-interval='15m0s'" subsys=cilium-operator-generic
+
+level=info msg=" --identity-gc-rate-interval='1m0s'" subsys=cilium-operator-generic
+
+level=info msg=" --identity-gc-rate-limit='2500'" subsys=cilium-operator-generic
+
+level=info msg=" --identity-heartbeat-timeout='30m0s'" subsys=cilium-operator-generic
+
+level=info msg=" --ipam='cluster-pool'" subsys=cilium-operator-generic
+
+level=info msg=" --k8s-api-server=''" subsys=cilium-operator-generic
+
+level=info msg=" --k8s-heartbeat-timeout='30s'" subsys=cilium-operator-generic
+
+level=info msg=" --k8s-kubeconfig-path=''" subsys=cilium-operator-generic
+
+level=info msg=" --k8s-namespace='kube-system'" subsys=cilium-operator-generic
+
+level=info msg=" --k8s-service-proxy-name=''" subsys=cilium-operator-generic
+
+level=info msg=" --kvstore=''" subsys=cilium-operator-generic
+
+level=info msg=" --kvstore-opt='map[]'" subsys=cilium-operator-generic
+
+level=info msg=" --leader-election-lease-duration='15s'" subsys=cilium-operator-generic
+
+level=info msg=" --leader-election-renew-deadline='10s'" subsys=cilium-operator-generic
+
+level=info msg=" --leader-election-retry-period='2s'" subsys=cilium-operator-generic
+
+level=info msg=" --limit-ipam-api-burst='4'" subsys=cilium-operator-generic
+
+level=info msg=" --limit-ipam-api-qps='20'" subsys=cilium-operator-generic
+
+level=info msg=" --log-driver=''" subsys=cilium-operator-generic
+
+level=info msg=" --log-opt='map[]'" subsys=cilium-operator-generic
+
+level=info msg=" --nodes-gc-interval='2m0s'" subsys=cilium-operator-generic
+
+level=info msg=" --operator-api-serve-addr='127.0.0.1:9234'" subsys=cilium-operator-generic
+
+level=info msg=" --operator-prometheus-serve-addr=':6942'" subsys=cilium-operator-generic
+
+level=info msg=" --parallel-alloc-workers='50'" subsys=cilium-operator-generic
+
+level=info msg=" --subnet-ids-filter=''" subsys=cilium-operator-generic
+
+level=info msg=" --subnet-tags-filter='[]'" subsys=cilium-operator-generic
+
+level=info msg=" --synchronize-k8s-nodes='true'" subsys=cilium-operator-generic
+
+level=info msg=" --synchronize-k8s-services='true'" subsys=cilium-operator-generic
+
+level=info msg=" --unmanaged-pod-watcher-interval='15'" subsys=cilium-operator-generic
+
+level=info msg=" --version='false'" subsys=cilium-operator-generic
+
+level=info msg="Cilium Operator 1.9.9 5bcf83c 2021-07-19T16:45:00-07:00 go version go1.15.14 linux/amd64" subsys=cilium-operator-generic
+
+level=info msg="Establishing connection to apiserver" host="https://10.96.0.1:443" subsys=k8s
+
+level=info msg="Starting apiserver on address 127.0.0.1:9234" subsys=cilium-operator-generic
+
+level=info msg="Establishing connection to apiserver" host="https://10.96.0.1:443" subsys=k8s
+
+level=info msg="Connected to apiserver" subsys=k8s
+
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumExternalWorkload/v2 subsys=k8s
+
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumIdentity/v2 subsys=k8s
+
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumLocalRedirectPolicy/v2 subsys=k8s
+
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumNode/v2 subsys=k8s
+
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumEndpoint/v2 subsys=k8s
+
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumNetworkPolicy/v2 subsys=k8s
+
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumClusterwideNetworkPolicy/v2 subsys=k8s
+
+level=info msg="attempting to acquire leader lease kube-system/cilium-operator-resource-lock..." subsys=klog
+
+level=info msg="Leader re-election complete" newLeader=cloud-services-capv-wc-g6gww-eQnZuWgjVd operatorID=cloud-services-capv-wc-g6gww-xASLxUHKFu subsys=cilium-operator-generic
+
+level=info msg="successfully acquired lease kube-system/cilium-operator-resource-lock" subsys=klog
+
+level=info msg="Initializing IPAM" mode=cluster-pool subsys=cilium-operator-generic
+
+level=info msg="Starting ClusterPool IP allocator" ipv4CIDRs="[10.0.0.0/8]" ipv6CIDRs="[]" subsys=ipam-allocator-clusterpool
+
+level=info msg="Starting to synchronize CiliumNode custom resources..." subsys=cilium-operator-generic
+
+level=info msg="Leading the operator HA deployment" subsys=cilium-operator-generic
+
+level=info msg="Starting to garbage collect stale CiliumEndpoint custom resources..." subsys=cilium-operator-generic
+
+level=info msg="Starting CRD identity garbage collector with 15m0s interval..." subsys=cilium-operator-generic
+
+level=info msg="Starting CNP derivative handler..." subsys=cilium-operator-generic
+
+level=info msg="Starting CCNP derivative handler..." subsys=cilium-operator-generic
+
+level=info msg="Initialization complete" subsys=cilium-operator-generic
+
+Failed to update lock: Put "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock": context deadline exceeded
+
+level=error msg="Failed to update lock: Put "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock": context deadline exceeded" subsys=klog
+
+level=warning msg="Failed to update lock: Put "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock": context deadline exceeded" subsys=klog
+
+level=info msg="Failed to update lock: Put "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock": context deadline exceeded" subsys=klog
+
+level=info msg="failed to renew lease kube-system/cilium-operator-resource-lock: timed out waiting for the condition" subsys=klog
+
+level=info msg="Leader election lost" operator-id=cloud-services-capv-wc-g6gww-xASLxUHKFu subsys=cilium-operator-generic
+
+close cilium-operator-5c555fbd6f-5s9pv.txt
+
+
+has context menu

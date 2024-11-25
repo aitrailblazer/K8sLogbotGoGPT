@@ -1,0 +1,66 @@
+HIGH - Crashing pod kubernetes-worker-64d5bb6c9c-xld8z in namespace kubernetes-service-ams
+
+Source: cloud-services-vie
+
+Crash Info
+
+label
+
+value
+
+Container
+
+worker
+
+Restarts
+
+756
+
+Status
+
+WAITING
+
+Reason
+
+CrashLoopBackOff
+
+Previous Container
+
+label
+
+value
+
+Status
+
+TERMINATED
+
+Reason
+
+Error
+
+Started at
+
+10/21/2024 11:41:40
+
+Finished at
+
+10/21/2024 11:41:41
+
+close kubernetes-worker-64d5bb6c9c-xld8z.log
+
+{"level":"info","timestamp":1729510900.9527893,"caller":"version/version.go:43","msg":"version info","BinaryName":"kubernetes-worker","Version":"0.1.0","SymbolicRef":"main","CommitSha":"14cced7bf8ab6ba0249e2df96ad30c40560ba867","CommitStatus":"-pre-dirty","BuildHost":"aab05951ed6a","BuildTime":"20241017192117Z"}
+
+{"level":"info","timestamp":1729510900.9539673,"caller":"observability/tracing.go:41","msg":"Jaeger is disabled"}
+
+{"level":"info","timestamp":1729510900.9540353,"caller":"kubernetes-worker/main.go:76","msg":"starting prometheus and profiling server","metrics_port":9092}
+
+{"level":"warn","timestamp":1729510900.954249,"logger":"capi.Client","caller":"capi/option.go:106","msg":"error configuring from kubeconfig","kubeconfig":"","context":"capi-editor@kind-infrastructure","error":"context "capi-editor@kind-infrastructure" does not exist"}
+
+{"level":"error","timestamp":1729510901.23622,"caller":"internal/config.go:254","msg":"Unable to create capi client","error":"provider not available","stacktrace":"code.k8s.dev/cloud/kubernetes-service/internal.(*Config).BuildWorker\n\t/__w/kubernetes-service/kubernetes-service/internal/config.go:254\nmain.main\n\t/__w/kubernetes-service/kubernetes-service/cmd/kubernetes-worker/main.go:90\nruntime.main\n\t/__t/go/1.22.8/x64/src/runtime/proc.go:271"}
+
+{"level":"fatal","timestamp":1729510901.2362711,"caller":"kubernetes-worker/main.go:92","msg":"error building worker","error":"provider not available","stacktrace":"main.main\n\t/__w/kubernetes-service/kubernetes-service/cmd/kubernetes-worker/main.go:92\nruntime.main\n\t/__t/go/1.22.8/x64/src/runtime/proc.go:271"}
+
+close kubernetes-worker-64d5bb6c9c-xld8z.log
+
+
+has context menu

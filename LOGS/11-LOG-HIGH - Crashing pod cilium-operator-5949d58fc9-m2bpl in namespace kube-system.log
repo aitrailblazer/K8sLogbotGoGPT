@@ -1,0 +1,60 @@
+HIGH - Crashing pod cilium-operator-5949d58fc9-m2bpl in namespace kube-system
+Source: cloud-services-wal
+Crash Info
+label
+value
+Container
+cilium-operator
+Restarts
+48
+Status
+WAITING
+Reason
+CrashLoopBackOff
+Previous Container
+label
+value
+Status
+TERMINATED
+Reason
+Error
+Started at
+10/18/2024 11:04:43
+Finished at
+10/18/2024 11:14:04
+close cilium-operator-5949d58fc9-m2bpl.log
+level=info msg=" --version='false'" subsys=cilium-operator-generic
+level=info msg="Cilium Operator 1.9.5 079bdaf 2021-03-10T13:12:19-08:00 go version go1.15.8 linux/amd64" subsys=cilium-operator-generic
+level=info msg="Starting apiserver on address 127.0.0.1:9234" subsys=cilium-operator-generic
+level=info msg="Establishing connection to apiserver" host="https://10.96.0.1:443" subsys=k8s
+level=info msg="Connected to apiserver" subsys=k8s
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumIdentity/v2 subsys=k8s
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumLocalRedirectPolicy/v2 subsys=k8s
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumNode/v2 subsys=k8s
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumExternalWorkload/v2 subsys=k8s
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumEndpoint/v2 subsys=k8s
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumClusterwideNetworkPolicy/v2 subsys=k8s
+level=info msg="CRD (CustomResourceDefinition) is installed and up-to-date" name=CiliumNetworkPolicy/v2 subsys=k8s
+level=info msg="attempting to acquire leader lease kube-system/cilium-operator-resource-lock..." subsys=klog
+level=info msg="successfully acquired lease kube-system/cilium-operator-resource-lock" subsys=klog
+level=info msg="Leading the operator HA deployment" subsys=cilium-operator-generic
+level=info msg="Initializing IPAM" mode=cluster-pool subsys=cilium-operator-generic
+level=info msg="Starting ClusterPool IP allocator" ipv4CIDRs="[192.168.0.0/20]" ipv6CIDRs="[]" subsys=ipam-allocator-clusterpool
+level=info msg="Starting to synchronize CiliumNode custom resources..." subsys=cilium-operator-generic
+level=info msg="Starting to garbage collect stale CiliumEndpoint custom resources..." subsys=cilium-operator-generic
+level=info msg="Starting CRD identity garbage collector with 15m0s interval..." subsys=cilium-operator-generic
+level=info msg="Starting CNP derivative handler..." subsys=cilium-operator-generic
+level=info msg="Starting CCNP derivative handler..." subsys=cilium-operator-generic
+level=info msg="Initialization complete" subsys=cilium-operator-generic
+error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock": context deadline exceeded
+level=error msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock": context deadline exceeded" subsys=klog
+level=warning msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock": context deadline exceeded" subsys=klog
+level=info msg="error retrieving resource lock kube-system/cilium-operator-resource-lock: Get "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cilium-operator-resource-lock": context deadline exceeded" subsys=klog
+Failed to release lock: resource name may not be empty
+level=error msg="Failed to release lock: resource name may not be empty" subsys=klog
+level=warning msg="Failed to release lock: resource name may not be empty" subsys=klog
+level=info msg="failed to renew lease kube-system/cilium-operator-resource-lock: timed out waiting for the condition" subsys=klog
+level=info msg="Leader election lost" operator-id=10-136-50-38.K8s.cloud-GCNNoirhrB subsys=cilium-operator-generic
+level=info msg="Failed to release lock: resource name may not be empty" subsys=klog
+close cilium-operator-5949d58fc9-m2bpl.log
+has context menu

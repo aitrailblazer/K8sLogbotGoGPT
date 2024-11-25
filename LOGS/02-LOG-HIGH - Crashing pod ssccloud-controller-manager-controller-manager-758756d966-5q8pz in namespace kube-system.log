@@ -1,0 +1,42 @@
+HIGH - Crashing pod K8s-controller-manager-controller-manager-758756d966-5q8pz in namespace kube-system
+
+Source: managed-k8s-capi-prod-kc
+
+manager restart count: 3067
+
+manager waiting reason: CrashLoopBackOff
+
+manager termination reason: OOMKilled
+
+close K8s-controller-manager-controller-manager-758756d966-5q8pz.txt
+
+2024-10-16T05:03:10Z. . . INFO. . . Initializing K8s Cloud client
+
+2024-10-16T05:03:10Z. . . INFO. . . Successfully initialized K8s Cloud client.
+
+2024-10-16T05:03:10Z. . . INFO. . . setup. . . starting manager
+
+2024-10-16T05:03:10Z. . . INFO. . . controller-runtime.metrics. . . Starting metrics server
+
+2024-10-16T05:03:10Z. . . INFO. . . starting server. . . {"name": "health probe", "addr": "[::]:8081"}
+
+2024-10-16T05:03:10Z. . . INFO. . . controller-runtime.metrics. . . Serving metrics server. . . {"bindAddress": "127.0.0.1:8080", "secure": false}
+
+I1016 05:03:10.800620 1 leaderelection.go:250] attempting to acquire leader lease kube-system/661c59c7.k8s.cloud...
+
+I1016 05:03:27.712356 1 leaderelection.go:260] successfully acquired lease kube-system/661c59c7.k8s.cloud
+
+2024-10-16T05:03:27Z. . . INFO. . . Starting EventSource. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "source": "kind source: *v1.Service"}
+
+2024-10-16T05:03:27Z. . . INFO. . . Starting EventSource. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "source": "kind source: *v1.Node"}
+
+2024-10-16T05:03:27Z. . . INFO. . . Starting EventSource. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "source": "kind source: *v1.ConfigMap"}
+
+2024-10-16T05:03:27Z. . . INFO. . . Starting Controller. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service"}
+
+2024-10-16T05:03:27Z. . . DEBUG. . . events. . . K8s-controller-manager-controller-manager-758756d966-5q8pz_76c3806c-06fe-4489-afe9-720e958a17e8 became leader. . . {"type": "Normal", "object": {"kind":"Lease","namespace":"kube-system","name":"661c59c7.k8s.cloud","uid":"c6a0f264-7a14-45aa-be85-8417357a709e","apiVersion":"coordination.k8s.io/v1","resourceVersion":"383264986"}, "reason": "LeaderElection"}
+
+close K8s-controller-manager-controller-manager-758756d966-5q8pz.txt
+
+
+has context menu

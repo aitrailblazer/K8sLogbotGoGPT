@@ -1,0 +1,47 @@
+HIGH - Crashing pod K8s-controller-manager-controller-manager-758756d966-tc7r9 in namespace kube-system
+Source: cloud-services-wal
+Crash Info
+label
+value
+Container
+manager
+Restarts
+4
+Status
+WAITING
+Reason
+CrashLoopBackOff
+Previous Container
+label
+value
+Status
+TERMINATED
+Reason
+Error
+Started at
+10/16/2024 06:30:55
+Finished at
+10/16/2024 06:31:46
+close K8s-controller-manager-controller-manager-758756d966-tc7r9.log
+2024-10-16T06:31:25Z. . . INFO. . . Skipping reconciliation for non-LoadBalancer service. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "Service": {"name":"cskps-grafana-headless","namespace":"monitoring"}, "namespace": "monitoring", "name": "cskps-grafana-headless", "reconcileID": "dc6c60b3-ad8a-4575-9434-33495eb2b0a9"}
+2024-10-16T06:31:25Z. . . INFO. . . Skipping reconciliation for non-LoadBalancer service. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "Service": {"name":"cskps-kube-prometheus-stac-prometheus","namespace":"monitoring"}, "namespace": "monitoring", "name": "cskps-kube-prometheus-stac-prometheus", "reconcileID": "1b4d94ba-39fd-4219-89db-9864099a8663"}
+2024-10-16T06:31:25Z. . . INFO. . . Skipping reconciliation for non-LoadBalancer service. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "Service": {"name":"cskps-kube-prometheus-stac-kube-proxy","namespace":"kube-system"}, "namespace": "kube-system", "name": "cskps-kube-prometheus-stac-kube-proxy", "reconcileID": "622e6731-c5bc-4619-8021-4b5e9d6cb026"}
+2024-10-16T06:31:25Z. . . INFO. . . Skipping reconciliation for non-LoadBalancer service. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "Service": {"name":"loki","namespace":"monitoring"}, "namespace": "monitoring", "name": "loki", "reconcileID": "60d948ff-2304-48de-ab0a-72d150c7be30"}
+E1016 06:31:41.156602 1 leaderelection.go:340] Failed to update lock optimitically: etcdserver: request timed out, falling back to slow path
+E1016 06:31:44.149586 1 leaderelection.go:347] error retrieving resource lock kube-system/661c59c7.k8s.cloud: Get "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/661c59c7.k8s.cloud": context deadline exceeded
+I1016 06:31:44.149629 1 leaderelection.go:285] failed to renew lease kube-system/661c59c7.k8s.cloud: timed out waiting for the condition
+E1016 06:31:46.188422 1 leaderelection.go:308] Failed to release lock: Operation cannot be fulfilled on leases.coordination.k8s.io "661c59c7.k8s.cloud": the object has been modified; please apply your changes to the latest version and try again
+2024-10-16T06:31:46Z. . . INFO. . . Stopping and waiting for non leader election runnables
+2024-10-16T06:31:46Z. . . DEBUG. . . events. . . K8s-controller-manager-controller-manager-758756d966-tc7r9_0b5436dd-b7a0-4ab4-a5dd-080be1f91f26 stopped leading. . . {"type": "Normal", "object": {"kind":"Lease","namespace":"kube-system","name":"661c59c7.k8s.cloud","uid":"531d027e-0421-48c2-ab03-43d617219701","apiVersion":"coordination.k8s.io/v1","resourceVersion":"172225591"}, "reason": "LeaderElection"}
+2024-10-16T06:31:46Z. . . INFO. . . Stopping and waiting for leader election runnables
+2024-10-16T06:31:46Z. . . INFO. . . Stopping and waiting for caches
+2024-10-16T06:31:46Z. . . INFO. . . Stopping and waiting for webhooks
+2024-10-16T06:31:46Z. . . INFO. . . Stopping and waiting for HTTP servers
+2024-10-16T06:31:46Z. . . ERROR. . . setup. . . problem running manager. . . {"error": "leader election lost"}
+main.main
+. . . /workspace/cmd/main.go:111
+runtime.main
+. . . /usr/local/go/src/runtime/proc.go:272
+2024-10-16T06:31:46Z. . . INFO. . . Shutdown signal received, waiting for all workers to finish. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service"}
+close K8s-controller-manager-controller-manager-758756d966-tc7r9.log
+has context menu

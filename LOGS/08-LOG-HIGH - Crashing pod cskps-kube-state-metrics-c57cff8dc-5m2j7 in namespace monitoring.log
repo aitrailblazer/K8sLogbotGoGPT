@@ -1,0 +1,71 @@
+HIGH - Crashing pod cskps-kube-state-metrics-c57cff8dc-5m2j7 in namespace monitoring
+
+Source: cloud-services-wal
+
+Crash Info
+
+label
+
+value
+
+Container
+
+kube-state-metrics
+
+Restarts
+
+12
+
+Status
+
+WAITING
+
+Reason
+
+CrashLoopBackOff
+
+Previous Container
+
+label
+
+value
+
+Status
+
+TERMINATED
+
+Reason
+
+Error
+
+Started at
+
+10/21/2024 18:19:59
+
+Finished at
+
+10/21/2024 18:20:09
+
+close cskps-kube-state-metrics-c57cff8dc-5m2j7.log
+
+I1021 18:19:59.288167 1 wrapper.go:120] "Starting kube-state-metrics"
+
+W1021 18:19:59.288505 1 client_config.go:659] Neither --kubeconfig nor --master was specified. Using the inClusterConfig. This might not work.
+
+I1021 18:19:59.288650 1 server.go:218] "Used resources" resources=["secrets","services","storageclasses","limitranges","mutatingwebhookconfigurations","poddisruptionbudgets","pods","replicasets","statefulsets","horizontalpodautoscalers","ingresses","namespaces","volumeattachments","configmaps","cronjobs","daemonsets","replicationcontrollers","resourcequotas","certificatesigningrequests","deployments","leases","networkpolicies","nodes","endpoints","jobs","validatingwebhookconfigurations","persistentvolumes","persistentvolumeclaims"]
+
+I1021 18:19:59.288712 1 types.go:227] "Using all namespaces"
+
+I1021 18:19:59.288725 1 types.go:145] "Using node type is nil"
+
+I1021 18:19:59.288739 1 server.go:245] "Metric allow-denylisting" allowDenyStatus="Excluding the following lists that were on denylist: "
+
+W1021 18:19:59.288751 1 client_config.go:659] Neither --kubeconfig nor --master was specified. Using the inClusterConfig. This might not work.
+
+I1021 18:19:59.289319 1 utils.go:72] "Tested communication with server"
+
+E1021 18:20:09.295547 1 wrapper.go:40] "Failed to run kube-state-metrics" err="failed to create client: error while trying to communicate with apiserver: Get "https://10.96.0.1:443/version": net/http: TLS handshake timeout"
+
+close cskps-kube-state-metrics-c57cff8dc-5m2j7.log
+
+

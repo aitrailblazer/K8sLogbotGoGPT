@@ -1,0 +1,45 @@
+HIGH - Crashing pod csc-contour-contour-6f479dd66c-fv89f in namespace contour
+Source: cloud-services-wal
+Crash Info
+label
+value
+Container
+contour
+Restarts
+21
+Status
+WAITING
+Reason
+CrashLoopBackOff
+Previous Container
+label
+value
+Status
+TERMINATED
+Reason
+Error
+Started at
+10/21/2024 18:20:08
+Finished at
+10/21/2024 18:20:30
+close csc-contour-contour-6f479dd66c-fv89f.log
+time="2024-10-21T18:20:08Z" level=info msg="maxprocs: Updating GOMAXPROCS=1: using minimum allowed GOMAXPROCS"
+{"level":"info","msg":"args: [serve --incluster --xds-address=0.0.0.0 --xds-port=8001 --http-port=8000 --envoy-service-http-port=8080 --envoy-service-https-port=8443 --contour-cafile=/certs/ca.crt --contour-cert-file=/certs/tls.crt --contour-key-file=/certs/tls.key --config-path=/config/contour.yaml --envoy-service-namespace=contour --envoy-service-name=csc-contour-envoy --leader-election-resource-name=contour-csc-contour-contour --log-format=json --kubernetes-debug=0 --ingress-class-name=contour]","time":"2024-10-21T18:20:08Z"}
+{"envoy-service-name":"csc-contour-envoy","envoy-service-namespace":"contour","level":"info","msg":"Watching Service for Ingress status","time":"2024-10-21T18:20:10Z"}
+{"context":"contourEventHandler","level":"info","msg":"started event handler","time":"2024-10-21T18:20:10Z"}
+{"address":"127.0.0.1:6060","context":"debugsvc","level":"info","msg":"started HTTP server","time":"2024-10-21T18:20:10Z"}
+{"address":"0.0.0.0:8000","context":"metricsvc","level":"info","msg":"started HTTP server","time":"2024-10-21T18:20:10Z"}
+{"context":"xds","level":"info","msg":"waiting for the initial dag to be built","time":"2024-10-21T18:20:10Z"}
+{"caller":"leaderelection.go:250","context":"kubernetes","level":"info","msg":"attempting to acquire leader lease contour/contour-csc-contour-contour...","time":"2024-10-21T18:20:10Z"}
+{"context":"contourEventHandler","last_update":102586424,"level":"info","msg":"performing delayed update","outstanding":18,"time":"2024-10-21T18:20:10Z"}
+{"context":"xds","level":"info","msg":"the initial dag is built","time":"2024-10-21T18:20:10Z"}
+{"address":"0.0.0.0:8001","context":"xds","level":"info","msg":"started xDS server type: "contour"","time":"2024-10-21T18:20:10Z"}
+{"caller":"leaderelection.go:260","context":"kubernetes","level":"info","msg":"successfully acquired lease contour/contour-csc-contour-contour","time":"2024-10-21T18:20:14Z"}
+{"context":"StatusUpdateHandler","level":"info","msg":"started status update handler","time":"2024-10-21T18:20:14Z"}
+{"context":"loadBalancerStatusWriter","level":"info","loadbalancer-address":"","msg":"received a new address for status.loadBalancer","time":"2024-10-21T18:20:14Z"}
+{"context":"contourEventHandler","last_update":3912239453,"level":"info","msg":"performing delayed update","outstanding":1,"time":"2024-10-21T18:20:14Z"}
+{"caller":"leaderelection.go:369","context":"kubernetes","error":null,"level":"error","msg":"Failed to update lock: Put "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/contour/leases/contour-csc-contour-contour": context deadline exceeded","time":"2024-10-21T18:20:24Z"}
+{"caller":"leaderelection.go:285","context":"kubernetes","level":"info","msg":"failed to renew lease contour/contour-csc-contour-contour: timed out waiting for the condition","time":"2024-10-21T18:20:24Z"}
+{"error":"leader election lost","level":"fatal","msg":"Contour server failed","time":"2024-10-21T18:20:30Z"}
+close csc-contour-contour-6f479dd66c-fv89f.log
+has context menu

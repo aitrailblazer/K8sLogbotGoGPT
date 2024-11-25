@@ -1,0 +1,42 @@
+HIGH - Crashing pod K8s-controller-manager-controller-manager-758756d966-tc7r9 in namespace kube-system
+Source: cloud-services-wal
+Crash Info
+label
+value
+Container
+manager
+Restarts
+11
+Status
+WAITING
+Reason
+CrashLoopBackOff
+Previous Container
+label
+value
+Status
+TERMINATED
+Reason
+Error
+Started at
+10/18/2024 01:35:01
+Finished at
+10/18/2024 11:04:30
+close K8s-controller-manager-controller-manager-758756d966-tc7r9.log
+2024-10-18T01:35:18Z. . . INFO. . . Skipping reconciliation for non-LoadBalancer service. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "Service": {"name":"alertmanager-operated","namespace":"monitoring"}, "namespace": "monitoring", "name": "alertmanager-operated", "reconcileID": "bf52c0e2-b689-4edc-b052-82198be8ca08"}
+2024-10-18T01:35:18Z. . . INFO. . . Skipping reconciliation for non-LoadBalancer service. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "Service": {"name":"cskps-kube-prometheus-stac-kube-scheduler","namespace":"kube-system"}, "namespace": "kube-system", "name": "cskps-kube-prometheus-stac-kube-scheduler", "reconcileID": "13cad67a-1ca3-4455-8b73-a575e4d595aa"}
+2024-10-18T01:35:18Z. . . INFO. . . Skipping reconciliation for non-LoadBalancer service. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "Service": {"name":"postgres-operator","namespace":"default"}, "namespace": "default", "name": "postgres-operator", "reconcileID": "9e1c75b8-2a58-4861-9951-30da9ba0b619"}
+E1018 11:03:57.693492 1 leaderelection.go:340] Failed to update lock optimitically: Put "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/661c59c7.k8s.cloud": context deadline exceeded, falling back to slow path
+E1018 11:03:57.694794 1 leaderelection.go:347] error retrieving resource lock kube-system/661c59c7.k8s.cloud: client rate limiter Wait returned an error: context deadline exceeded
+I1018 11:03:57.694853 1 leaderelection.go:285] failed to renew lease kube-system/661c59c7.k8s.cloud: timed out waiting for the condition
+E1018 11:04:30.687673 1 leaderelection.go:308] Failed to release lock: Put "https://10.96.0.1:443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/661c59c7.k8s.cloud": http2: client connection lost
+W1018 11:04:30.687711 1 reflector.go:470] pkg/mod/k8s.io/client-go@v0.30.3/tools/cache/reflector.go:232: watch of *v1.Node ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W1018 11:04:30.687769 1 reflector.go:470] pkg/mod/k8s.io/client-go@v0.30.3/tools/cache/reflector.go:232: watch of *v1.Service ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W1018 11:04:30.687720 1 reflector.go:470] pkg/mod/k8s.io/client-go@v0.30.3/tools/cache/reflector.go:232: watch of *v1.ConfigMap ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+2024-10-18T11:04:30Z. . . DEBUG. . . events. . . K8s-controller-manager-controller-manager-758756d966-tc7r9_7d6073c6-022d-4e67-813f-7a0929ce9b37 stopped leading. . . {"type": "Normal", "object": {"kind":"Lease","namespace":"kube-system","name":"661c59c7.k8s.cloud","uid":"531d027e-0421-48c2-ab03-43d617219701","apiVersion":"coordination.k8s.io/v1","resourceVersion":"173185282"}, "reason": "LeaderElection"}
+2024-10-18T11:04:30Z. . . ERROR. . . setup. . . problem running manager. . . {"error": "leader election lost"}
+main.main
+. . . /workspace/cmd/main.go:111
+runtime.main
+. . . /usr/local/go/src/runtime/proc.go:272
+close K8s-controller-manager-controller-manager-758756d966-tc7r9.log

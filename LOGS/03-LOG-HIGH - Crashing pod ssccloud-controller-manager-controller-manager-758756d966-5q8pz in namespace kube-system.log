@@ -1,0 +1,21 @@
+HIGH - Crashing pod K8s-controller-manager-controller-manager-758756d966-5q8pz in namespace kube-system
+Source: managed-k8s-capi-prod-kc
+manager restart count: 3373
+manager waiting reason: CrashLoopBackOff
+manager termination reason: OOMKilled
+close K8s-controller-manager-controller-manager-758756d966-5q8pz.txt
+2024-10-17T05:19:11Z. . . INFO. . . Initializing K8s Cloud client
+2024-10-17T05:19:11Z. . . INFO. . . Successfully initialized K8s Cloud client.
+2024-10-17T05:19:11Z. . . INFO. . . setup. . . starting manager
+2024-10-17T05:19:11Z. . . INFO. . . controller-runtime.metrics. . . Starting metrics server
+2024-10-17T05:19:11Z. . . INFO. . . controller-runtime.metrics. . . Serving metrics server. . . {"bindAddress": "127.0.0.1:8080", "secure": false}
+2024-10-17T05:19:11Z. . . INFO. . . starting server. . . {"name": "health probe", "addr": "[::]:8081"}
+I1017 05:19:11.879821 1 leaderelection.go:250] attempting to acquire leader lease kube-system/661c59c7.k8s.cloud...
+I1017 05:19:28.607536 1 leaderelection.go:260] successfully acquired lease kube-system/661c59c7.k8s.cloud
+2024-10-17T05:19:28Z. . . DEBUG. . . events. . . K8s-controller-manager-controller-manager-758756d966-5q8pz_253e0b1a-ff5c-4b07-bead-022109f79320 became leader. . . {"type": "Normal", "object": {"kind":"Lease","namespace":"kube-system","name":"661c59c7.k8s.cloud","uid":"c6a0f264-7a14-45aa-be85-8417357a709e","apiVersion":"coordination.k8s.io/v1","resourceVersion":"383764349"}, "reason": "LeaderElection"}
+2024-10-17T05:19:28Z. . . INFO. . . Starting EventSource. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "source": "kind source: *v1.Service"}
+2024-10-17T05:19:28Z. . . INFO. . . Starting EventSource. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "source": "kind source: *v1.Node"}
+2024-10-17T05:19:28Z. . . INFO. . . Starting EventSource. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service", "source": "kind source: *v1.ConfigMap"}
+2024-10-17T05:19:28Z. . . INFO. . . Starting Controller. . . {"controller": "service", "controllerGroup": "", "controllerKind": "Service"}
+close K8s-controller-manager-controller-manager-758756d966-5q8pz.txt
+has context menu
